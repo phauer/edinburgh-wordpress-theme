@@ -1,5 +1,4 @@
 - single post view
-  - missing category and tags!
   - comment
   - comment form
 - footer: bring in one row: recent posts, recent comments, categories
