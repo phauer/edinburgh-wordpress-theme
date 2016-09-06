@@ -82,37 +82,38 @@ header.eb-header {
 
 footer.eb-footer {
   @extend .eb-content-line-height;
-  .mks_author_widget {
-    @extend .eb-border-top;
-    @extend .eb-border-bottom;
-    padding: 20px 10px 20px 10px;
-    img {
-      @extend .eb-avatar;
-      float: left;
-      margin: 0 15px 0 15px;
-    }
-  }
-  .widget {
-    ul {
-      list-style: none;
-      padding-left: 0px;
-    }
-  }
-  .widget_recent_entries,
-  .widget_categories{
-    a {
-      display: block;
-      &:hover{
-        background-color: $eb-gray-lighter;
-      }
-    }
-  }
   .eb-imprint {
     @extend .eb-border-top;
     padding: 19px 0 0 17px;
     color: #777;
     line-height: 8px;
     font-size: $eb-small-text-size;
+  }
+}
+aside.mks_author_widget {
+  @extend .eb-border-top;
+  @extend .eb-border-bottom;
+  padding: 20px 10px 20px 10px;
+  img {
+    @extend .eb-avatar;
+    float: left;
+    margin: 0 15px 0 15px;
+  }
+}
+aside.widget {
+  @extend .eb-content-line-height;
+  ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+aside.widget_recent_entries,
+aside.widget_categories{
+  a {
+    display: block;
+    &:hover{
+      background-color: $eb-gray-lighter;
+    }
   }
 }
 

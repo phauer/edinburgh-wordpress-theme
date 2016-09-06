@@ -5,7 +5,6 @@
   - comment
   - comment form
 - footer: bring in one row: recent posts, recent comments, categories
-- use <aside> instead of <footer> for recent posts, recent comments, categories
 - remove unused dependencies in package.json. re-try to setup dev env.
 - views: tags
 - google-analytics-tracking.php - insert but don't commit to github!

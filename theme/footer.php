@@ -13,10 +13,11 @@
   <?php endif; ?>
 </nav>
 
+<?php
+dynamic_sidebar( 'widget-area' );
+?>
+
 <footer class="eb-footer">
-  <?php
-  dynamic_sidebar( 'widget-area' );
-  ?>
   <div class="row eb-imprint">
     <p><a href="/legal/">Imprint, Contribution, Privacy Policy</a></p>
   </div>
