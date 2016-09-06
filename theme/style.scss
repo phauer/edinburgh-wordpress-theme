@@ -140,6 +140,34 @@ main.eb-content {
         margin: 10px;
         float: left;
       }
+      .alignleft {
+        display: inline; float: left; margin-right: 1.5em;
+      }
+      .alignright {
+        display: inline; float: right; margin-left: 1.5em;
+      }
+      .aligncenter {
+        clear: both; display: block; margin: 0 auto;
+      }
+      img {
+        display: inline-block; height: auto; max-width: 100%;
+      }
+      img[class*="wp-image-"] {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .wp-caption {
+        border: 1px solid #ccc; margin-bottom: 10px; max-width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 0 10px;
+        &.aligncenter {
+          margin-bottom: 10px;
+        }
+        img[class*="wp-image-"] {
+          display: block;
+        }
+        .wp-caption-text {
+          text-align: center; margin-top: 10px;
+        }
+      }
     }
     footer {
       clear: both;
@@ -184,4 +212,15 @@ nav.eb-paging-navigation {
 .emoji {
   height: 1em !important;
   width: 1em !important;
+}
+
+/* class to resize svgs (because it can't be set like you do with pixel images) */
+.svg-500px {
+  width: 500px;
+}
+.svg-400px {
+  width: 400px;
+}
+.svg-600px {
+  width: 600px;
 }
