@@ -1,8 +1,6 @@
 - comment
   - form design
-  - improve layout
-    - gray reply bar
-    - name and date in same line
+  - missing two checkboxes
   - improve pingback layout
 - footer: bring in one row: recent posts, recent comments, categories
 - clean up:

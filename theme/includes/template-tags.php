@@ -19,10 +19,10 @@ function edinburgh_comment( $comment, $args, $depth ) {
 			</a>
 
 			<div class="media-body">
-				<div class="media-body-wrap panel">
+				<div class="media-body-wrap eb-comment-test-area">
 
-					<h5 class="media-heading"><?php printf( __( '%s <span class="says">says:</span>', 'edinburgh' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
 					<p class="comment-meta">
+            <?php printf( __( 'From %s. ', 'edinburgh' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 							<time datetime="<?php comment_time( 'c' ); ?>">
 								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'edinburgh' ), get_comment_date(), get_comment_time() ); ?>
@@ -39,8 +39,13 @@ function edinburgh_comment( $comment, $args, $depth ) {
 						<?php comment_text(); ?>
 					</div>
 
-					<footer class="reply comment-reply panel-footer">
-						<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<footer class="comment-reply">
+						<?php comment_reply_link( array_merge( $args, array(
+						  'add_below' => 'div-comment',
+              'depth' => $depth,
+              'max_depth' => $args['max_depth'],
+              'reply_text' => "<span class=\"glyphicon glyphicon-share-alt\"></span> Reply"
+            ) ) ); ?>
 					</footer>
 				</div>
 			</div>

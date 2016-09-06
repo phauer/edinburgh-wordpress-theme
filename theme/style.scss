@@ -189,6 +189,11 @@ main.eb-content {
           margin-left: 25px;
         }
       }
+      div.eb-comment-test-area {
+        @extend .eb-border-bottom;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
     }
   }
 }

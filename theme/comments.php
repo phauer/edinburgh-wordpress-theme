@@ -53,9 +53,7 @@ if ( post_password_required() )
 			  'title_reply_to'    => __( 'Leave a Reply to %s', 'edinburgh' ),
 			  'cancel_reply_link' => __( 'Cancel Reply', 'edinburgh' ),
 			  'label_submit'      => __( 'Post Comment', 'edinburgh' ),
-
 			  'comment_field' =>  '<p><textarea placeholder="Type your comment here..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
-
 			  'comment_notes_after' => ''
 	));
 	?>

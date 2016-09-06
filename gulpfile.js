@@ -26,7 +26,7 @@ gulp.task('php', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('theme/*.php', ['php']);
+    gulp.watch('theme/**/*.php', ['php']);
     gulp.watch('theme/*.scss', ['sass']);
 });
 
