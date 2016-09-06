@@ -1,0 +1,18 @@
+- footer: bring in one row: recent posts, recent comments, categories
+- use <aside> instead of <footer> for recent posts, recent comments, categories
+- search
+- post navigation (older posts, newer posts)
+- single post view
+  - missing category and tags!
+  - don't put featured image always on top
+  - image format (border, caption, limit width)
+  - comment
+  - comment form
+  - next, previous post
+- remove unused dependencies in package.json. re-try to setup dev env.
+- views:
+  - tags
+  - 404.php
+  - no-results.php
+- featured image of eclipse post to large!
+- google-analytics-tracking.php - insert but don't commit to github!

@@ -1,0 +1,186 @@
+/*
+Theme Name: Distinct
+Theme URI: //www.your_site.com/
+Description: Blah blah, so and so, short description here…
+Version: 0.5
+Author: Your Name Here
+Author URI: //www.your_site.com/
+*/
+$eb-blue: #428bca;
+$eb-blue-dark: #2a6496;
+$eb-gray: #777;
+$eb-gray-light: #e5e5e5;
+$eb-gray-lighter: #eeeeee;
+$eb-black: #333333;
+
+$eb-small-text-size: 13px;
+$eb-content-text-size: 16px;
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: $eb-content-text-size;
+}
+
+a {
+  color: $eb-blue;
+  &:hover {
+    color: $eb-blue-dark;
+  }
+}
+
+header.eb-header {
+  padding: 20px 0 0 0;
+  background: url("images/philipphauer-logo.png") no-repeat 7px center;
+
+  h1.eb-title {
+    margin: 0 0 0 40px;
+    line-height: 40px;
+    font-size: 40px;
+  }
+  p.eb-subtitle {
+    color: $eb-gray;
+    font-size: 14px;
+    margin: 0 0 20px 40px;
+  }
+  nav.eb-navbar-default {
+    background-color: #ffffff;
+    border: none;
+    .navbar-collapse.in,
+    .navbar-collapse.collapsing {
+      border: 1px solid #ddd;
+    }
+    .eb-active {
+      font-style: italic;
+      background-color: #fff;
+    }
+    li {
+      &:hover {
+        background-color: $eb-gray-lighter;
+      }
+    }
+    li a {
+      color: $eb-gray !important;
+    }
+  }
+}
+
+.eb-border-top {
+  border-top: 1px solid $eb-gray-light;
+}
+.eb-border-bottom {
+  border-bottom: 1px solid $eb-gray-light;
+}
+.eb-content-line-height {
+  line-height: 1.7em;
+}
+.eb-avatar {
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+}
+
+footer.eb-footer {
+  @extend .eb-content-line-height;
+  .mks_author_widget {
+    @extend .eb-border-top;
+    @extend .eb-border-bottom;
+    padding: 20px 10px 20px 10px;
+    img {
+      @extend .eb-avatar;
+      float: left;
+      margin: 0 15px 0 15px;
+    }
+  }
+  .widget {
+    ul {
+      list-style: none;
+      padding-left: 0px;
+    }
+  }
+  .widget_recent_entries,
+  .widget_categories{
+    a {
+      display: block;
+      &:hover{
+        background-color: $eb-gray-lighter;
+      }
+    }
+  }
+  .eb-imprint {
+    @extend .eb-border-top;
+    padding: 19px 0 0 17px;
+    color: #777;
+    line-height: 8px;
+    font-size: $eb-small-text-size;
+  }
+}
+
+main.eb-content {
+  margin: 20px 0;
+  article.eb-entry {
+    @extend .eb-content-line-height;
+    margin-bottom: 40px;
+    header {
+      h1 {
+        clear: both;
+      }
+      h1 + p {
+        text-align: right;
+        line-height: 10px;
+        font-size: $eb-small-text-size;
+        color: $eb-gray;
+      }
+    }
+    .eb-entry-content {
+      text-align: justify;
+
+      img.eb-thumbnail {
+        margin: 10px;
+        float: left;
+      }
+    }
+    footer {
+      clear: both;
+      &.eb-entry-meta {
+        font-size: $eb-small-text-size;
+        padding-top: 30px;
+      }
+    }
+
+    div.eb-comments-area {
+      div.comment-content {
+        text-align: justify;
+      }
+      ul {
+        list-style: none;
+        &.children {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+nav.eb-paging-navigation,
+nav.eb-post-navigation {
+  h1.eb-screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+  }
+}
+nav.eb-paging-navigation {
+  text-align: center;
+  margin-bottom: 20px;
+  div {
+    display: inline;
+  }
+  h1 + div { //workaround for div:first-child
+    margin-right: 15px;
+  }
+}
+
+.emoji {
+  height: 1em !important;
+  width: 1em !important;
+}
