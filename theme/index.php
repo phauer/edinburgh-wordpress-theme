@@ -12,7 +12,7 @@
           <?php the_post_thumbnail('mythumbnails', array( 'class' => 'eb-thumbnail')); ?>
         </a>
       <?php endif; ?>
-      <p><?php the_content(__('Continue Reading...')); ?></p>
+      <p><?php the_content(''); ?></p>
     </section>
     <footer></footer>
   </article>

@@ -14,7 +14,6 @@ if (function_exists( 'add_theme_support')) {
     'default-image' => '',
   )));
 }
-remove_filter ('the_content', 'wpautop'); //remove <p> around "Continue Reading..."
 
 // increase excerpt length in feed
 function custom_excerpt_length( $length ) {
