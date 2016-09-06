@@ -1,6 +1,6 @@
 # Edinburgh Wordpress Template
 
-Upcoming Wordpress template for my blog.
+Upcoming Wordpress theme for my blog.
 
 **Please mind that this theme is currently under construction! It's not finished yet.** 
 
@@ -17,9 +17,9 @@ $ gulp sass # compile sass file once
 $ gulp # listen for changes, compile sass files and reload browser
 ```
 
-Get a local Wordpress up and running. Symlink the project folder `app` into your Wordpress installation
+Get a local Wordpress up and running. Symlink the project folder `theme` into your Wordpress installation
 ```
-ln -s <project root>/app <wordpress root>/wp-content/themes/edinburgh 
+ln -s <project root>/theme <wordpress root>/wp-content/themes/edinburgh 
 ```
 
 Enable the theme in the Wordpress backend.
@@ -33,7 +33,7 @@ Useful links for setting up the dev env:
 Compile SASS and copy the files to the theme folder of your Wordpress installation:
 ```
 $ gulp sass
-$ cp <project root>/app <wordpress root>/wp-content/themes/edinburgh
+$ cp <project root>/theme <wordpress root>/wp-content/themes/edinburgh
 ```
 
 - Next, go to the Wordpress backend
