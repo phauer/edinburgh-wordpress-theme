@@ -1,7 +1,6 @@
 - search
 - single post view
   - missing category and tags!
-  - don't put featured image always on top
   - image format (border, caption, limit width)
   - comment
   - comment form

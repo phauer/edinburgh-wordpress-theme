@@ -7,7 +7,7 @@
       <p>Posted on <?php the_time('F jS, Y') ?></p>
     </header>
     <section class="eb-entry-content">
-      <?php if ( has_post_thumbnail() ) :?>
+      <?php if ( has_post_thumbnail() && ! is_single()) :?>
         <a href="<?php the_permalink(); ?>" rel="bookmark">
           <?php the_post_thumbnail('mythumbnails', array( 'class' => 'eb-thumbnail')); ?>
         </a>
