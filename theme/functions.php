@@ -16,6 +16,13 @@ if (function_exists( 'add_theme_support')) {
 }
 remove_filter ('the_content', 'wpautop'); //remove <p> around "Continue Reading..."
 
+// increase excerpt length in feed
+function custom_excerpt_length( $length ) {
+  return 70;//default: 55
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
+// set up widget area (about author, recent posts, recent comments, categories etc).
 function eb_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Custom Widget Area', 'edinburgh' ),
@@ -27,4 +34,5 @@ function eb_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'eb_widgets_init' );
+
 ?>
