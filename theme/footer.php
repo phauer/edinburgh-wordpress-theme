@@ -1,7 +1,16 @@
-<nav role="navigation" id="nav-below" class="eb-paging-navigation">
-  <h1 class="eb-screen-reader-text">Post navigation</h1>
-  <div class="nav-previous"> <a href="#">← Older posts</a> </div>
-  <div class="nav-next"><a href="#">Newer posts →</a></div>
+<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="eb-paging-navigation">
+  <h1 class="eb-screen-reader-text"><?php _e( 'Post navigation', 'jokkmokk' ); ?></h1>
+  <?php if ( is_single() ) : // navigation links for single posts ?>
+    <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'jokkmokk' ) . '</span> %title' ); ?>
+    <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'jokkmokk' ) . '</span>' ); ?>
+  <?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+    <?php if ( get_next_posts_link() ) : ?>
+      <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'jokkmokk' ) ); ?></div>
+    <?php endif; ?>
+    <?php if ( get_previous_posts_link() ) : ?>
+      <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'jokkmokk' ) ); ?></div>
+    <?php endif; ?>
+  <?php endif; ?>
 </nav>
 
 <footer class="eb-footer">
