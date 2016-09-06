@@ -1,4 +1,3 @@
-- search
 - single post view
   - missing category and tags!
   - comment

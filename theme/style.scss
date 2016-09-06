@@ -62,6 +62,9 @@ header.eb-header {
     li a {
       color: $eb-gray !important;
     }
+    ul.eb-search-dropdown-menu {
+      width: 275px;
+    }
   }
 }
 

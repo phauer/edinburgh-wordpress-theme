@@ -42,23 +42,7 @@
                   'container' => false, //remove div
                   'items_wrap' => '%3$s' //remove ul
                 )); ?>
-
-<!--                TODO search !! -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <form class="navbar-form form-inline" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button type="submit" class="btn btn-default">
-                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        </button>
-                      </div>
-                    </form>
-                  </ul>
-                </li>
+                <?php get_search_form(); ?>
               </ul>
             </div>
           </div>
