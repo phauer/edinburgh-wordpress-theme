@@ -1,6 +1,9 @@
-- single post view
-  - comment
-  - comment form
+- comment
+  - form design
+  - improve layout
+    - gray reply bar
+    - name and date in same line
+  - improve pingback layout
 - footer: bring in one row: recent posts, recent comments, categories
 - clean up:
   - remove unused dependencies in package.json. re-try to setup dev env.

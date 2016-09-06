@@ -34,4 +34,4 @@ function eb_widgets_init() {
 }
 add_action( 'widgets_init', 'eb_widgets_init' );
 
-?>
+require get_template_directory() . '/includes/template-tags.php';
