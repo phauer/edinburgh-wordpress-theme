@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'), //minify css
     rename = require('gulp-rename'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
@@ -22,7 +22,7 @@ gulp.task('sass', function () {
         }))
         .pipe(gulp.dest('theme'))
         .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('theme'));
   livereload.reload();
 });

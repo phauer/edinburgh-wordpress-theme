@@ -1,5 +1,5 @@
 - footer: bring in one row: recent posts, recent comments, categories
 - clean up:
   - split up style.scss to multiple scss files (layout, article, comments). @import.
-  - remove unused dependencies in package.json. re-try to setup dev env.
 - google-analytics-tracking.php - insert but don't commit to github!
+- finally compare source code & DOM of pages
