@@ -1,3 +1,9 @@
+<?php
+if ( is_active_sidebar( 'before-comments-widget-area' ) ) {
+  dynamic_sidebar( 'before-comments-widget-area' );
+}
+?>
+
 <nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="eb-paging-navigation">
   <h1 class="eb-screen-reader-text"><?php _e( 'Post navigation', 'jokkmokk' ); ?></h1>
   <?php if ( is_single() ) : // navigation links for single posts ?>
@@ -13,11 +19,6 @@
   <?php endif; ?>
 </nav>
 
-<?php
-if ( is_active_sidebar( 'before-comments-widget-area' ) ) {
-  dynamic_sidebar( 'before-comments-widget-area' );
-}
-?>
 <?php if ( is_active_sidebar( 'after-comments-widget-area' ) ) : ?>
   <div class="row">
     <?php dynamic_sidebar( 'after-comments-widget-area' ); ?>

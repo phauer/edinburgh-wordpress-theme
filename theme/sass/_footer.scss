@@ -2,14 +2,14 @@
 
 nav.eb-paging-navigation,
 nav.eb-post-navigation {
+  text-align: center;
+  margin: 30px 0 20px 0;
   h1.eb-screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
   }
 }
 nav.eb-paging-navigation {
-  text-align: center;
-  margin-bottom: 20px;
   div {
     display: inline;
   }
