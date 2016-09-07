@@ -13,3 +13,17 @@ a {
     color: $eb-blue-dark;
   }
 }
+
+/* the following classes are supposed to be extended by other classes */
+.eb-border-top {
+  border-top: 1px solid $eb-gray-light;
+}
+.eb-border-bottom {
+  border-bottom: 1px solid $eb-gray-light;
+}
+.eb-content-line-height {
+  line-height: 1.7em;
+}
+.avatar {
+  border-radius: 150px;
+}
