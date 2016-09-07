@@ -16,6 +16,13 @@ gulp.task('sass', function () {
     gulp.src('theme/*.scss')
         .pipe(plumber(plumberErrorHandler))
         .pipe(sass())
+        .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
+        }))
+        .pipe(gulp.dest('theme'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
         .pipe(gulp.dest('theme'));
   livereload.reload();
 });

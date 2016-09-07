@@ -26,8 +26,8 @@ Enable the theme in the Wordpress backend.
 
 ### Contribution
 Useful links for setting up the dev env:
-- [Setting Up Gulp With LiveReload, Sass, and Other Tasks](https://community.nitrous.io/tutorials/setting-up-gulp-with-livereload-sass-and-other-tasks)
 - [Using Gulp for WordPress Automation](http://code.tutsplus.com/tutorials/using-gulp-for-wordpress-automation--cms-23081)
+- [Setting Up Gulp With LiveReload, Sass, and Other Tasks](https://community.nitrous.io/tutorials/setting-up-gulp-with-livereload-sass-and-other-tasks)
 
 # Installation
 Compile SASS and copy the files to the theme folder of your Wordpress installation:
