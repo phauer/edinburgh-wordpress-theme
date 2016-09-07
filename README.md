@@ -1,8 +1,6 @@
 # Edinburgh Wordpress Template
 
-Upcoming Wordpress theme for my blog.
-
-**Please mind that this theme is currently under construction! It's not finished yet.** 
+Upcoming Wordpress theme for my blog. Please mind that this theme is tailored for my blog. It may also work for your use case, but don't expect it.
 
 ## Setup Development Environment
 
@@ -43,3 +41,4 @@ $ cp <project root>/theme <wordpress root>/wp-content/themes/edinburgh
     - "After Comments Widget Areas": add Recent Posts, Recent Comments, Categories here.
   - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
   - If necessary, reconnect to JetPack to enable Gravatar Hovercards (and notification checkbox in comment form?)
+- Optional: define your Google Analytics ID. Therefore, change `theme/google-analytics-config.php`.

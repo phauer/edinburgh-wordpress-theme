@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/edinburgh.min.css">
 </head>
 <body <?php body_class(); ?>>
+<?php include_once("google-analytics.php"); ?>
 
 <div class="container">
   <header class="eb-header">
