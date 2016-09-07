@@ -1,7 +1,6 @@
 - comment
   - form design
   - missing two checkboxes
-  - gravatar link broken
 - footer: bring in one row: recent posts, recent comments, categories
 - clean up:
   - split up style.scss to multiple scss files (layout, article, comments). @import.

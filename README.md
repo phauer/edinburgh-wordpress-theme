@@ -41,3 +41,4 @@ $ cp <project root>/theme <wordpress root>/wp-content/themes/edinburgh
   - Appearance > Customize. Widgets > Custom Widget Area
     - The following widgets are supported: Meks Smart Author, Recent Posts, Recent Comments, Categories
   - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
+  - If necessary, reconnect to JetPack to enable Gravatar Hovercards.
