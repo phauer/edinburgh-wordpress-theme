@@ -20,6 +20,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: $eb-content-text-size;
+  color: $eb-black;
 }
 
 a {
@@ -249,4 +250,26 @@ nav.eb-paging-navigation {
 }
 .svg-600px {
   width: 600px;
+}
+
+
+/* cookie popup */
+div.cc_banner-wrapper {
+  a.cc_btn_accept_all {
+    background-color: $eb-blue;
+    color: white;
+    &:hover {
+      background-color: rgba($eb-blue, 0.65);
+      color: white;
+    }
+  }
+  a.cc_more_info {
+    color: $eb-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p.cc_message{
+    color: $eb-black;
+  }
 }
