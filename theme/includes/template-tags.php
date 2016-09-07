@@ -7,7 +7,20 @@ function edinburgh_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'edinburgh' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'edinburgh' ), '<span class="edit-link">', '</span>' ); ?>
+			<p class="pingback-header">
+        <?php _e( 'Pingback', 'edinburgh' ); ?>
+      </p>
+      <div class="pingback-body">
+      <p>
+        <time datetime="<?php comment_time( 'c' ); ?>">
+          <?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'edinburgh' ), get_comment_date(), get_comment_time() ); ?>
+        </time>
+        <?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'edinburgh' ), '<span class="edit-link">', '</span>' ); ?>
+      </p>
+      <p>
+        <?php comment_author_link(); ?>
+      </p>
+      </div>
 		</div>
 
 	<?php else : ?>
@@ -22,7 +35,7 @@ function edinburgh_comment( $comment, $args, $depth ) {
 				<div class="media-body-wrap eb-comment-test-area">
 
 					<p class="comment-meta">
-            <?php printf( __( 'From %s. ', 'edinburgh' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+            <?php printf( __( '%s. ', 'edinburgh' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 							<time datetime="<?php comment_time( 'c' ); ?>">
 								<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'edinburgh' ), get_comment_date(), get_comment_time() ); ?>

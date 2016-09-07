@@ -1,9 +1,10 @@
 - comment
   - form design
   - missing two checkboxes
-  - improve pingback layout
+  - gravatar link broken
 - footer: bring in one row: recent posts, recent comments, categories
 - clean up:
+  - split up style.scss to multiple scss files (layout, article, comments). @import.
   - remove unused dependencies in package.json. re-try to setup dev env.
   - gulpfile.js: clean up unused variables
 - views: tags
