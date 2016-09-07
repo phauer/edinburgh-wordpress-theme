@@ -9,7 +9,7 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php wp_head(); ?>
   <link href="<?php bloginfo('template_url'); ?>/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/edinburgh.min.css">
 </head>
 <body <?php body_class(); ?>>
 

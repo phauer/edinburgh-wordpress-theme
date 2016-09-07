@@ -20,10 +20,10 @@ gulp.task('sass', function () {
           browsers: ['last 2 versions'],
           cascade: false
         }))
-        .pipe(gulp.dest('theme'))
+        .pipe(gulp.dest('theme/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('theme'));
+        .pipe(gulp.dest('theme/css'));
   livereload.reload();
 });
 
