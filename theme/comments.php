@@ -46,15 +46,56 @@ if ( post_password_required() )
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'edinburgh' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form( $args = array(
-			  'id_form'           => 'commentform',
-			  'id_submit'         => 'commentsubmit',
-			  'title_reply'       => __( 'Leave a Reply' , 'edinburgh'),
-			  'title_reply_to'    => __( 'Leave a Reply to %s', 'edinburgh' ),
-			  'cancel_reply_link' => __( 'Cancel Reply', 'edinburgh' ),
-			  'label_submit'      => __( 'Post Comment', 'edinburgh' ),
-			  'comment_field' =>  '<p><textarea placeholder="Type your comment here..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
-			  'comment_notes_after' => ''
+	<?php
+  $fields =  array(
+    'author' =>
+      '<div class="form-group">
+            <label for="author" class="col-sm-2 control-label">' . __( 'Name', 'edinburgh' ) . '</label>' .
+            ( $req ? '<span class="required">*</span>' : '' ) .
+            '<div class="col-sm-10">
+              <input type="text" class="form-control" id="author" name="author" value="'. esc_attr( $commenter['comment_author'] ) .'" ' . $aria_req . '/>
+            </div>
+       </div>'
+    ,
+    'email' =>
+      '<div class="form-group">
+            <label for="email" class="col-sm-2 control-label">' . __( 'E-Mail', 'edinburgh' ) . '</label>' .
+            ( $req ? '<span class="required">*</span>' : '' ) .
+            '<div class="col-sm-10">
+              <input type="email" aria-describedby="email-notes" class="form-control" id="email" name="email" value="'. esc_attr( $commenter['comment_author_email'] ) .'" ' . $aria_req . '/>
+            </div>
+       </div>'
+    ,
+    'url' =>
+      '<div class="form-group">
+            <label for="url" class="col-sm-2 control-label">' . __( 'Website', 'edinburgh' ) . '</label>' .
+            '<div class="col-sm-10">
+              <input type="text" class="form-control" id="url" name="url" value="'. esc_attr( $commenter['comment_author_url'] ) .'"/>
+            </div>
+       </div>'
+  );
+  $comment_field =
+    '<div class="form-group">
+            <div class="col-sm-12">
+            <textarea rows="10" class="form-control" id="comment" class="form-control" name="comment"
+                      placeholder="Your comment..."
+                      aria-required="true"></textarea>
+            </div>
+          </div>';
+  $submit_button = '<div class="form-group"><div class="col-sm-offset-2 col-sm-10">
+            <input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />
+        </div></div>';
+  comment_form( $args = array(
+    'title_reply'       => __( 'Leave a Comment' , 'edinburgh'),
+    'title_reply_to'    => __( 'Leave a Reply to %s', 'edinburgh' ),
+    'cancel_reply_link' => __( 'Cancel Reply', 'edinburgh' ),
+    'label_submit'      => __( 'Post Comment', 'edinburgh' ),
+    'comment_field' =>  $comment_field,
+    'comment_notes_after' => '',
+    'class_submit' => 'submit btn btn-primary',
+    'class_form' => 'form-horizontal comment-form',
+    'fields' => $fields,
+    'submit_button' => $submit_button
 	));
 	?>
 </div>

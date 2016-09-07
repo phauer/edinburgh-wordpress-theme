@@ -1,7 +1,5 @@
-- comment
-  - form design
-  - missing two checkboxes
 - footer: bring in one row: recent posts, recent comments, categories
+- cookie popup -> wrong button color (use incognito tab)
 - clean up:
   - split up style.scss to multiple scss files (layout, article, comments). @import.
   - remove unused dependencies in package.json. re-try to setup dev env.
