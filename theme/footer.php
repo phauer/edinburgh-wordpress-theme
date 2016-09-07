@@ -13,8 +13,15 @@
 <?php endif; ?>
 
 <?php
+//supposed to be author widget
 if ( is_active_sidebar( 'before-comments-widget-area' ) ) {
   dynamic_sidebar( 'before-comments-widget-area' );
+}
+?>
+
+<?php
+if ( comments_open() || '0' != get_comments_number() ) {
+  comments_template();
 }
 ?>
 
@@ -26,6 +33,7 @@ if ( is_active_sidebar( 'before-comments-widget-area' ) ) {
   </nav>
 <?php endif; ?>
 
+<!--supposed to be other widgets like recent posts, recent comments, categories-->
 <?php if ( is_active_sidebar( 'after-comments-widget-area' ) ) : ?>
   <div class="row">
     <?php dynamic_sidebar( 'after-comments-widget-area' ); ?>
