@@ -1,0 +1,15 @@
+@import "common";
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: $eb-content-text-size;
+  color: $eb-black;
+}
+
+a {
+  color: $eb-blue;
+  &:hover {
+    color: $eb-blue-dark;
+  }
+}

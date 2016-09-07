@@ -1,5 +1,3 @@
-- comments after author
-- clean up:
-  - split up style.scss to multiple scss files (layout, article, comments). @import.
+- author before navigation and comments
 - google-analytics-tracking.php - insert but don't commit to github!
 - finally compare source code & DOM of pages

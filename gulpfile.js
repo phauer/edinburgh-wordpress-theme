@@ -13,7 +13,7 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 })};
 
 gulp.task('sass', function () {
-    gulp.src('theme/*.scss')
+    gulp.src('theme/sass/*.scss')
         .pipe(plumber(plumberErrorHandler))
         .pipe(sass())
         .pipe(autoprefixer({
@@ -34,7 +34,7 @@ gulp.task('php', function () {
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch('theme/**/*.php', ['php']);
-    gulp.watch('theme/*.scss', ['sass']);
+    gulp.watch('theme/sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'watch'], function () {

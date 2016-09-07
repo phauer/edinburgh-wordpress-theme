@@ -1,0 +1,22 @@
+$eb-blue: #428bca;
+$eb-blue-dark: #2a6496;
+$eb-gray: #777;
+$eb-gray-light: #e5e5e5;
+$eb-gray-lighter: #eeeeee;
+$eb-black: #333333;
+
+$eb-small-text-size: 13px;
+$eb-content-text-size: 16px;
+
+.eb-border-top {
+  border-top: 1px solid $eb-gray-light;
+}
+.eb-border-bottom {
+  border-bottom: 1px solid $eb-gray-light;
+}
+.eb-content-line-height {
+  line-height: 1.7em;
+}
+.avatar {
+  border-radius: 150px;
+}
