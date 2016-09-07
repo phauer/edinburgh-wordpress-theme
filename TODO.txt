@@ -1,4 +1,4 @@
-- footer: bring in one row: recent posts, recent comments, categories
+- comments after author
 - clean up:
   - split up style.scss to multiple scss files (layout, article, comments). @import.
 - google-analytics-tracking.php - insert but don't commit to github!

@@ -38,7 +38,8 @@ $ cp <project root>/theme <wordpress root>/wp-content/themes/edinburgh
 
 - Next, go to the Wordpress backend
   - Appearance > Themes. Activate the Edinburgh theme
-  - Appearance > Customize. Widgets > Custom Widget Area
-    - The following widgets are supported: Meks Smart Author, Recent Posts, Recent Comments, Categories
+  - Recommended Widgets Configuration (Appearance > Customize):
+    - "Before Comments Widget Areas": add Meks Smart Author here (no title, 80 avatar size, no "all posts" link)
+    - "After Comments Widget Areas": add Recent Posts, Recent Comments, Categories here.
   - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
   - If necessary, reconnect to JetPack to enable Gravatar Hovercards (and notification checkbox in comment form?)

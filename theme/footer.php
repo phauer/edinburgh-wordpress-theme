@@ -14,8 +14,15 @@
 </nav>
 
 <?php
-dynamic_sidebar( 'widget-area' );
+if ( is_active_sidebar( 'before-comments-widget-area' ) ) {
+  dynamic_sidebar( 'before-comments-widget-area' );
+}
 ?>
+<?php if ( is_active_sidebar( 'after-comments-widget-area' ) ) : ?>
+  <div class="row">
+    <?php dynamic_sidebar( 'after-comments-widget-area' ); ?>
+  </div>
+ <?php endif; ?>
 
 <footer class="eb-footer">
   <div class="row eb-imprint">

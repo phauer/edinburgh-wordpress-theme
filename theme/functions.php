@@ -21,17 +21,25 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
 
-// set up widget area (about author, recent posts, recent comments, categories etc).
 function eb_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Custom Widget Area', 'edinburgh' ),
-    'id'            => 'widget-area',
+    'name'          => __( 'Before Comments Widget Area', 'edinburgh' ),
+    'id'            => 'before-comments-widget-area',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'After Comments Widget Area', 'edinburgh' ),
+    'id'            => 'after-comments-widget-area',
+    'before_widget' => '<aside id="%1$s" class="col-md-4 widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
   ) );
 }
 add_action( 'widgets_init', 'eb_widgets_init' );
+
 
 require get_template_directory() . '/includes/template-tags.php';
