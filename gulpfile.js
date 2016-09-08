@@ -5,7 +5,11 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    zip = require('gulp-zip'),
+    filter = require('gulp-filter'),
+    del = require('del');
+var themeFolder = 'edinburgh/';
 
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
@@ -13,17 +17,17 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 })};
 
 gulp.task('sass', function () {
-    gulp.src('edinburgh/sass/*.scss')
+    gulp.src(themeFolder + 'sass/*.scss')
         .pipe(plumber(plumberErrorHandler))
         .pipe(sass())
         .pipe(autoprefixer({
           browsers: ['last 2 versions'],
           cascade: false
         }))
-        .pipe(gulp.dest('edinburgh/css'))
+        .pipe(gulp.dest(themeFolder + 'css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('edinburgh/css'));
+        .pipe(gulp.dest(themeFolder + 'css'));
   livereload.reload();
 });
 
@@ -33,10 +37,22 @@ gulp.task('php', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('edinburgh/**/*.php', ['php']);
-    gulp.watch('edinburgh/sass/*.scss', ['sass']);
+    gulp.watch(themeFolder + '**/*.php', ['php']);
+    gulp.watch(themeFolder + 'sass/*.scss', ['sass']);
+});
+
+gulp.task('dist', ['clean', 'sass'], function() {
+  const sassFilter = filter(['**/*', '!**/*.scss', '!**/sass']);
+  gulp.src(themeFolder + '**/*')
+    .pipe(sassFilter)
+    .pipe(gulp.dest('dist/edinburgh'))
+    .pipe(zip('edinburgh.zip'))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('clean', function(){
+  return del(['dist']);
 });
 
 gulp.task('default', ['sass', 'watch'], function () {
-
 });

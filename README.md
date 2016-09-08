@@ -28,11 +28,10 @@ Useful links for setting up the dev env:
 - [Setting Up Gulp With LiveReload, Sass, and Other Tasks](https://community.nitrous.io/tutorials/setting-up-gulp-with-livereload-sass-and-other-tasks)
 
 # Installation
-- Compile SASS using `$ gulp sass`
-- Upload the folder `<project root>/edinburgh` to the theme folder of your Wordpress installation `<wordpress root>/wp-content/themes/`.
-
+- Run `$ gulp dist`. This creates both a folder containing the theme (`dist/edinburgh`) and a zip file with the same content (`dist/edinburgh.zip`)
+- Upload the zip file or directly the folder `<project root>/dist/edinburgh` to the theme folder of your Wordpress installation `<wordpress root>/wp-content/themes/`.
 ```
-$ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes <project path>/edinburgh
+$ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes <project path>/dist/edinburgh
 ```
 - Next, go to the Wordpress backend
     - Appearance > Themes. Activate the Edinburgh theme
