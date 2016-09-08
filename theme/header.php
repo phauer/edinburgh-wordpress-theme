@@ -10,9 +10,9 @@
   <?php wp_head(); ?>
   <link href="<?php bloginfo('template_url'); ?>/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/edinburgh.min.css">
+  <?php include_once("google-analytics.php"); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php include_once("google-analytics.php"); ?>
 
 <div class="container">
   <header class="eb-header">
