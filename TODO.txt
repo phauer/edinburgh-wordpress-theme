@@ -1,2 +1,0 @@
-- google-analytics-tracking.php - insert but don't commit to github!
-- finally compare source code & DOM of pages

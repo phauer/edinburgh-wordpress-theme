@@ -13,17 +13,17 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 })};
 
 gulp.task('sass', function () {
-    gulp.src('theme/sass/*.scss')
+    gulp.src('edinburgh/sass/*.scss')
         .pipe(plumber(plumberErrorHandler))
         .pipe(sass())
         .pipe(autoprefixer({
           browsers: ['last 2 versions'],
           cascade: false
         }))
-        .pipe(gulp.dest('theme/css'))
+        .pipe(gulp.dest('edinburgh/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('theme/css'));
+        .pipe(gulp.dest('edinburgh/css'));
   livereload.reload();
 });
 
@@ -33,8 +33,8 @@ gulp.task('php', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('theme/**/*.php', ['php']);
-    gulp.watch('theme/sass/*.scss', ['sass']);
+    gulp.watch('edinburgh/**/*.php', ['php']);
+    gulp.watch('edinburgh/sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'watch'], function () {

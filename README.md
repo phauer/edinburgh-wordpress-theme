@@ -17,7 +17,7 @@ $ gulp # listen for changes, compile sass files and reload browser
 
 Get a local Wordpress up and running. Symlink the project folder `theme` into your Wordpress installation
 ```
-ln -s <project root>/theme <wordpress root>/wp-content/themes/edinburgh 
+ln -s <project root>/edinburgh <wordpress root>/wp-content/themes/edinburgh 
 ```
 
 Enable the theme in the Wordpress backend.
@@ -28,17 +28,17 @@ Useful links for setting up the dev env:
 - [Setting Up Gulp With LiveReload, Sass, and Other Tasks](https://community.nitrous.io/tutorials/setting-up-gulp-with-livereload-sass-and-other-tasks)
 
 # Installation
-Compile SASS and copy the files to the theme folder of your Wordpress installation:
-```
-$ gulp sass
-$ cp <project root>/theme <wordpress root>/wp-content/themes/edinburgh
-```
+1. Compile SASS using `$ gulp sass`
+1. Upload the folder `<project root>/edinburgh` to the theme folder of your Wordpress installation `<wordpress root>/wp-content/themes/`.
 
-- Next, go to the Wordpress backend
-  - Appearance > Themes. Activate the Edinburgh theme
-  - Recommended Widgets Configuration (Appearance > Customize):
-    - "Before Comments Widget Areas": add Meks Smart Author here (no title, 80 avatar size, no "all posts" link)
-    - "After Comments Widget Areas": add Recent Posts, Recent Comments, Categories here.
-  - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
-  - If necessary, reconnect to JetPack to enable Gravatar Hovercards (and notification checkbox in comment form?)
-- Optional: define your Google Analytics ID. Therefore, change `theme/google-analytics-config.php`.
+```
+$ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes <project path>/edinburgh
+```
+3. Next, go to the Wordpress backend
+    1. Appearance > Themes. Activate the Edinburgh theme
+    1. Recommended Widgets Configuration (Appearance > Customize):
+        - "Before Comments Widget Areas": add Meks Smart Author here (no title, 80 avatar size, no "all posts" link)
+        - "After Comments Widget Areas": add Recent Posts, Recent Comments, Categories here.
+    1. If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
+    1. If necessary, reconnect to JetPack to enable Gravatar Hovercards and notification checkboxes in comment form.
+1. Optional: define your Google Analytics Property ID (UA-XXXXXXXX-X). Therefore, change `theme/google-analytics-config.php`. Tip: Create a filter in Google Analytics to include only traffic coming from your host name. This prevents the hijacking of your Google Analytics Property ID.
