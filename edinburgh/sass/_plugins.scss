@@ -1,0 +1,4 @@
+div.crayon-syntax {
+  width: initial; //override 100% to let it float around the TOC. Avoid this "clear:both" behaviour.
+  margin-left: 20px;
+}

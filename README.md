@@ -11,13 +11,12 @@ Then
 ```
 # clone git repo
 $ npm install
-$ gulp sass # compile sass file once
 $ gulp # listen for changes, compile sass files and reload browser
 ```
 
 Get a local Wordpress up and running. Symlink the project folder `theme` into your Wordpress installation
 ```
-ln -s <project root>/edinburgh <wordpress root>/wp-content/themes/edinburgh 
+$ ln -s <project root>/edinburgh <wordpress root>/wp-content/themes/edinburgh 
 ```
 
 Enable the theme in the Wordpress backend.
