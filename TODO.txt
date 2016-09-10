@@ -1,2 +1,2 @@
 - missing gravatar hovercard
-- compare payload
+- does notification work?

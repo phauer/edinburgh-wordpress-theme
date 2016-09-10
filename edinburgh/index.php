@@ -3,7 +3,13 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <article class="eb-entry">
     <header>
-      <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+      <h1>
+        <?php if (is_single()) :?>
+          <?php the_title(); ?>
+        <?php else: ?>
+          <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+        <?php endif; ?>
+      </h1>
       <p>Posted on <?php the_time('F jS, Y') ?></p>
     </header>
     <section class="eb-entry-content">
