@@ -1,6 +1,6 @@
 # Edinburgh Wordpress Template
 
-Upcoming Wordpress theme for my blog. Please mind that this theme is tailored for my blog. It may also work for your use case, but don't expect it.
+Wordpress theme for my blog. Please mind that this theme is tailored for my blog. It may also work for your use case, but don't expect it.
 
 ## Setup Development Environment
 
