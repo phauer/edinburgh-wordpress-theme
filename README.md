@@ -16,15 +16,10 @@ $ gulp # listen for changes, compile sass files and reload browser
 
 Get a local Wordpress up and running. Symlink the project folder `theme` into your Wordpress installation
 ```
-$ ln -s <project root>/edinburgh <wordpress root>/wp-content/themes/edinburgh 
+$ ln -s <project root>/edinburgh <wordpress root>/wp-content/themes/edinburgh
 ```
 
 Enable the theme in the Wordpress backend.
-
-### Contribution
-Useful links for setting up the dev env:
-- [Using Gulp for WordPress Automation](http://code.tutsplus.com/tutorials/using-gulp-for-wordpress-automation--cms-23081)
-- [Setting Up Gulp With LiveReload, Sass, and Other Tasks](https://community.nitrous.io/tutorials/setting-up-gulp-with-livereload-sass-and-other-tasks)
 
 # Installation
 - Run `$ gulp dist`. This creates both a folder containing the theme (`dist/edinburgh`) and a zip file with the same content (`dist/edinburgh.zip`)
