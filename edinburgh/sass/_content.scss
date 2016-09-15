@@ -29,8 +29,10 @@ main.eb-content {
       }
     }
     .eb-entry-content {
-      text-align: justify;
-      @extend .eb-text-format;
+      p, li {
+        text-align: justify;
+        @extend .eb-text-format;
+      }
       h1 {
         margin-top: 60px;
       }
