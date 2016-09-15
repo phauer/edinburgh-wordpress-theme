@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="row eb-content">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <article class="eb-entry">
+  <article class="eb-entry eb-entry-<?php echo (is_single()? 'single': 'list') ?>">
     <header>
       <h1>
         <?php if (is_single()) :?>
