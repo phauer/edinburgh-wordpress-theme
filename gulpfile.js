@@ -31,13 +31,14 @@ gulp.task('sass', function () {
   livereload.reload();
 });
 
-gulp.task('php', function () {
+gulp.task('refresh', function () {
     livereload.reload();
 });
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(themeFolder + '**/*.php', ['php']);
+    gulp.watch(themeFolder + '**/*.php', ['refresh']);
+    gulp.watch(themeFolder + '**/*.html', ['refresh']);
     gulp.watch(themeFolder + 'sass/*.scss', ['sass']);
 });
 
