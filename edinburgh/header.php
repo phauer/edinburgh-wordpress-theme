@@ -17,7 +17,7 @@
 <div class="container">
   <header class="eb-header">
     <div class="row">
-      <div class="col-md-8 col-sm-7 col-xs-9">
+      <div class="col-md-8 col-sm-6 col-xs-12">
         <h1 class="text-muted eb-title">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
@@ -25,9 +25,8 @@
         </h1>
         <p class="text-muted eb-subtitle"><?php bloginfo( 'description' ); ?></p>
       </div>
-      <div class="col-md-4 col-sm-5 col-xs-3">
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <nav class="navbar navbar-default eb-navbar-default" role="navigation">
-          <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -46,7 +45,6 @@
                 <?php get_search_form(); ?>
               </ul>
             </div>
-          </div>
         </nav>
       </div>
     </div>

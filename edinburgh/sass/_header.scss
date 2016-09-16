@@ -2,20 +2,22 @@
 
 header.eb-header {
   padding: 20px 0 0 0;
-  background: url("../images/philipphauer-logo.png") no-repeat 7px center;
+  background: url("../images/philipphauer-logo.png") no-repeat 7px 17px;
 
   h1.eb-title {
     margin: 0 0 0 40px;
     line-height: 40px;
     font-size: 40px;
+    white-space:nowrap;
   }
   p.eb-subtitle {
     color: $eb-gray;
     font-size: 14px;
     margin: 0 0 20px 40px;
+    white-space:nowrap;
   }
   nav.eb-navbar-default {
-    background-color: #ffffff;
+    background-color: transparent;
     border: none;
     .navbar-collapse.in,
     .navbar-collapse.collapsing {
