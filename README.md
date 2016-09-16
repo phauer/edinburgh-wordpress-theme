@@ -30,7 +30,7 @@ $ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes
 - Next, go to the Wordpress backend
     - Appearance > Themes. Activate the Edinburgh theme
     - Recommended Widgets Configuration (Appearance > Customize):
-        - "Before Comments Widget Areas": add Meks Smart Author here (no title, 80 avatar size, no "all posts" link)
+        - "Before Comments Widget Areas": add Meks Smart Author here (no title, 100 avatar size, no "all posts" link)
         - "After Comments Widget Areas": add Recent Posts, Recent Comments, Categories here.
     - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
     - JetPack Plugin: Check if JetPack is working correctly. You may need to disconnected and reconnect to Wordpress.com.
