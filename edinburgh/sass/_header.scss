@@ -2,19 +2,23 @@
 
 header.eb-header {
   padding: 20px 0 0 0;
-  background: url("../images/philipphauer-logo.png") no-repeat 7px 17px;
-
+  div.eb-title-column {
+    background: url("../images/philipphauer-logo.png") no-repeat 22px center;
+  }
+  h1.eb-title, p.eb-subtitle{
+    @media (min-width: $eb-small-max-width) {
+      white-space:nowrap;
+    }
+  }
   h1.eb-title {
-    margin: 0 0 0 40px;
+    margin: 5px 0 0 40px;
     line-height: 40px;
     font-size: 40px;
-    white-space:nowrap;
   }
   p.eb-subtitle {
+    margin: 2px 0 5px 40px;
     color: $eb-gray;
     font-size: 14px;
-    margin: 0 0 20px 40px;
-    white-space:nowrap;
   }
   nav.eb-navbar-default {
     background-color: transparent;

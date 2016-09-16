@@ -17,7 +17,7 @@
 <div class="container">
   <header class="eb-header">
     <div class="row">
-      <div class="col-md-8 col-sm-6 col-xs-12">
+      <div class="col-md-8 col-sm-6 col-xs-12 eb-title-column">
         <h1 class="text-muted eb-title">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
