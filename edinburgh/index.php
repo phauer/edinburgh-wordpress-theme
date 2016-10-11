@@ -15,7 +15,7 @@
     <section class="eb-entry-content">
       <?php if ( has_post_thumbnail() && ! is_single()) :?>
         <a href="<?php the_permalink(); ?>" rel="bookmark">
-          <?php the_post_thumbnail('mythumbnails', array( 'class' => 'eb-thumbnail')); ?>
+          <?php the_post_thumbnail(array(200, 200), array( 'class' => 'eb-thumbnail')); ?>
         </a>
       <?php endif; ?>
       <p><?php the_content(''); ?></p>

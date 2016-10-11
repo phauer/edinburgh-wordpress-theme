@@ -5,7 +5,8 @@ if (function_exists( 'add_theme_support')) {
   add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 }
 
-add_image_size( 'mythumbnails', 150, 9999 ); //300 pixels wide (and unlimited height)
+//set thumbnail size with the "the_post_thumbnail" in index.php
+//mind, that svgs are handled differently. set the size in _content.scss in the rule with "[src$=".svg"]"
 
 // increase excerpt length in feed
 function custom_excerpt_length( $length ) {

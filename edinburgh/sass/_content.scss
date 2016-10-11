@@ -61,6 +61,9 @@ main.eb-content {
         margin-top: 10px;
         margin-bottom: 10px;
       }
+      img.eb-thumbnail.wp-post-image[src$=".svg"] {
+        width: 200px;
+      }
       .wp-caption {
         border: 1px solid #ccc;
         margin-bottom: 10px;
