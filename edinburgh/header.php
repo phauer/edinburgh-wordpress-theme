@@ -49,3 +49,6 @@
       </div>
     </div>
   </header>
+  <aside class="row eb-carbonads">
+    <?php include_once("carbonads-config.php"); ?>
+  </aside>

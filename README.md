@@ -35,3 +35,4 @@ $ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes
     - If you use the plugin `Simple Custom CSS`, please remove all custom styles (or deinstall plugin completely)
     - JetPack Plugin: Check if JetPack is working correctly. You may need to disconnected and reconnect to Wordpress.com.
 - Optional: define your Google Analytics Property ID (UA-XXXXXXXX-X). Therefore, change `theme/google-analytics-config.php`. Tip: Create a filter in Google Analytics to include only traffic coming from your host name. This prevents the hijacking of your Google Analytics Property ID.
+- Optional: If you are using Carbon Ads, insert your `<script>` snippet in `carbonads-config.php`
