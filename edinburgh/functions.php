@@ -5,8 +5,11 @@ if (function_exists( 'add_theme_support')) {
   add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 }
 
-//set thumbnail size with the "the_post_thumbnail" in index.php
 //mind, that svgs are handled differently. set the size in _content.scss in the rule with "[src$=".svg"]"
+function add_custom_sizes() {
+  add_image_size($name = 'eb-thumb', $width = 200, $height = 200, $crop = false);
+}
+add_action('after_setup_theme','add_custom_sizes');
 
 // increase excerpt length in feed
 function custom_excerpt_length( $length ) {
