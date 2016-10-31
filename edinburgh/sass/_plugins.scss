@@ -2,3 +2,7 @@ div.crayon-syntax {
   width: initial; //override 100% to let it float around the TOC. Avoid this "clear:both" behaviour.
   margin-left: 20px;
 }
+
+div#toc_container li {
+  text-align: left; //so much space when using "justify"
+}
