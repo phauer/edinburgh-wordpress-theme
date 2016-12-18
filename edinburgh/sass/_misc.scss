@@ -10,6 +10,7 @@
 .svg-600px {
   width: 600px;
 }
+
 /* override bootstrap's default */
 pre {
   background-color: #fff;
@@ -17,7 +18,11 @@ pre {
 }
 code{
   font-family: monospace;
+  color: $eb-black;
+  background: inherit;
 }
+
+
 /* only for the intermediate state (after crayon, before markdown). can be removed after migration to markdown is completed. */
 span.crayon-inline{
   font-family: monospace;
