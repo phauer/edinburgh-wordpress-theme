@@ -39,6 +39,7 @@ gulp.task('watch', function () {
     livereload.listen();
     gulp.watch(themeFolder + '**/*.php', ['refresh']);
     gulp.watch(themeFolder + '**/*.html', ['refresh']);
+    gulp.watch(themeFolder + 'includes/highlightjs/styles/*.css', ['refresh']);
     gulp.watch(themeFolder + 'sass/*.scss', ['sass']);
 });
 

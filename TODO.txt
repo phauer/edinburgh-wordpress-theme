@@ -1,2 +1,4 @@
+- merge all css and js files! saves requests and speed! edinburgh, bootstrap, jquery, highlightjs
+
 - missing gravatar hovercard
 - does notification work?

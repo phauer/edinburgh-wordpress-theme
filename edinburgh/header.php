@@ -10,6 +10,9 @@
   <?php wp_head(); ?>
   <link href="<?php bloginfo('template_url'); ?>/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/edinburgh.min.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/includes/highlightjs/styles/idea-mod.css">
+  <script src="<?php bloginfo('template_url'); ?>/includes/highlightjs/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <?php include_once("google-analytics.php"); ?>
 </head>
 <body <?php body_class(); ?>>
