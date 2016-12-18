@@ -16,9 +16,9 @@ pre {
   border: 1px solid $eb-gray-light;
 }
 code{
-  font-family: monospace; /* Courier New sucks. it's too light. */
+  font-family: monospace;
 }
 /* only for the intermediate state (after crayon, before markdown). can be removed after migration to markdown is completed. */
 span.crayon-inline{
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-family: monospace;
 }
