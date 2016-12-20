@@ -1,0 +1,25 @@
+@import "common";
+
+//markdown classes. pattern to use captions with markdown extra:
+//![asdfasdfdsf](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png){.center}
+//*asdfasdfdsf*
+main.eb-content {
+  article.eb-entry {
+    .eb-entry-content {
+      .center {
+        display:block;
+        margin: 0 auto;
+        +br {
+          display:none;
+        }
+        +em,
+        +br+em {
+          text-align: center;
+          display: block;
+          margin-top: 5px;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
