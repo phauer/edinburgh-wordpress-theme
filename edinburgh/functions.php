@@ -17,6 +17,14 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
 
+//when I insert a image in the backend, generate markdown instead of html.
+//I use the caption for both the alt text and the caption below the image.
+function markdown_insert_image( $html, $id, $caption, $title, $align, $url, $size, $alt){
+  list( $img_src, $width, $height ) = wp_get_attachment_image_src( $id, $size );
+  return "![{$caption}]({$img_src})\n*{$caption}*";
+}
+add_filter( 'image_send_to_editor', 'markdown_insert_image', 10, 8);
+
 function eb_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Before Comments Widget Area', 'edinburgh' ),
