@@ -1,4 +1,8 @@
-- merge all css and js files! saves requests and speed! edinburgh, bootstrap, jquery, highlightjs
+- remove includes and images from dist!!!
+  - but mind to include template-tags.php!!
+  - check code formatting
+  - fix broken watch workflow (-> also trigger concat tasks)
+  - clean up on server
 
 - missing gravatar hovercard
 - does notification work?

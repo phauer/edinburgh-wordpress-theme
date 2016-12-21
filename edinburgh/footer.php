@@ -47,8 +47,9 @@ if ( comments_open() || '0' != get_comments_number() ) {
 </footer>
 </div>
 
-<script src="<?php bloginfo('template_url'); ?>/includes/jquery-3.1.0.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/includes/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/final/js/mergedScripts.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <?php wp_footer(); ?>
 <?php include_once("cookie-consent-plugin.php") ?>
 
