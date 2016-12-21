@@ -69,8 +69,8 @@ gulp.task('clean', function(){
 
 gulp.task('concatJs', function () {
   return gulp.src([
-    themeFolder+'includes/bootstrap/js/bootstrap.js',
     themeFolder+'includes/jquery-3.1.0.min.js',
+    themeFolder+'includes/bootstrap/js/bootstrap.js',
     themeFolder+'includes/highlightjs/highlight.pack.js'
   ])
     .pipe(concat('mergedScripts.min.js'))

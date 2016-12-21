@@ -45,5 +45,14 @@ function eb_widgets_init() {
 }
 add_action( 'widgets_init', 'eb_widgets_init' );
 
+add_action('init', 'head_cleanup');
+function head_cleanup() {
+  remove_action( 'wp_head', 'wp_generator' );// WP version
+  if (!is_admin()) {
+    wp_deregister_script('jquery');                  // De-Register jQuery
+    wp_register_script('jquery', '', '', '', true);  // Register as 'empty', because we manually insert our script in header.php
+  }
+}
+
 
 require get_template_directory() . '/includes/template-tags.php';
