@@ -54,5 +54,9 @@ function head_cleanup() {
   }
 }
 
+// remove WP version from RSS
+add_filter('the_generator', 'no_wordpress_version_in_rss');
+function no_wordpress_version_in_rss() { return ''; }
+
 
 require get_template_directory() . '/includes/template-tags.php';
