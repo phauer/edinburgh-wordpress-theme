@@ -16,6 +16,12 @@ a {
   &:hover {
     color: $eb-blue-dark;
   }
+  code {
+    color: $eb-blue;
+    &:hover {
+      color: $eb-blue-dark;
+    }
+  }
 }
 .eb-text-format {
   letter-spacing: 0.03rem; // justify needs more space between letters. otherwise there are to big gaps between the words
