@@ -1,8 +1,10 @@
 - remove includes and images from dist!!!
-  - but mind to include template-tags.php!!
-  - check code formatting
+  - remove images and includes folder from dist! but mind template-tags.php!
+    - clean up on server
   - fix broken watch workflow (-> also trigger concat tasks)
-  - clean up on server
-
-- missing gravatar hovercard
+  - rename "final" to "res"
+  - includes
+    - move template-tags out of there!!
+    - rename to "deps"
+- find other solution for not committing carbonads-config.php
 - does notification work?

@@ -53,9 +53,14 @@ gulp.task('watch', function () {
 gulp.task('createFinal', ['clean', 'sass', 'concatCss', 'concatJs', 'copyBootstrapFonts', 'copyImages']);
 
 gulp.task('dist', ['createFinal'], function() {
-  //const sassFilter = filter(['**/*', '!**/*.scss', '!**/sass', '!**/images', '!**/includes']);
-  //TODO
-  const sassFilter = filter(['**/*', '!**/*.scss', '!**/sass', '!**/images', '!**/includes']);
+  const sassFilter = filter([
+    themeFolder + 'final/**/*',
+    themeFolder + '*.php',
+    themeFolder + '*.ico',
+    themeFolder + '*.css',
+    themeFolder + '*.png',
+    themeFolder + 'includes/*.php'
+  ]);
   gulp.src(themeFolder + '**/*')
     .pipe(sassFilter)
     .pipe(gulp.dest('dist/edinburgh'))
@@ -69,7 +74,7 @@ gulp.task('clean', function(){
 
 gulp.task('concatJs', function () {
   return gulp.src([
-    themeFolder+'includes/jquery-3.1.0.min.js',
+    themeFolder+'includes/jquery-3.1.0.min.js', //first jquery, then bootstrap
     themeFolder+'includes/bootstrap/js/bootstrap.js',
     themeFolder+'includes/highlightjs/highlight.pack.js'
   ])
