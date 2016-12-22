@@ -1,6 +1,6 @@
 node_modules
 .idea
 *.iml
-edinburgh/final
+edinburgh/res
 dist
 edinburgh/carbonads-config.php
