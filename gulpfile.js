@@ -12,11 +12,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var themeFolder = 'edinburgh/';
-var finalFolder = themeFolder + 'final/';
-var finalJsFolder = finalFolder + 'js/';
-var finalCssFolder = finalFolder + 'css/';
-var finalFontsFolder = finalFolder + 'fonts/';
-var finalImgFolder = finalFolder + 'img/';
+var resFolder = themeFolder + 'res/';
+var jsFolder = resFolder + 'js/';
+var cssFolder = resFolder + 'css/';
+var fontsFolder = resFolder + 'fonts/';
+var imgFolder = resFolder + 'img/';
 
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
@@ -31,10 +31,10 @@ gulp.task('sass', function () {
           browsers: ['last 2 versions'],
           cascade: false
         }))
-        .pipe(gulp.dest(finalCssFolder))
+        .pipe(gulp.dest(cssFolder))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS())
-        .pipe(gulp.dest(finalCssFolder));
+        .pipe(gulp.dest(cssFolder));
   livereload.reload();
 });
 
@@ -48,11 +48,11 @@ gulp.task('watch', function () {
     gulp.watch(themeFolder + 'sass/*.scss', ['sass']);
 });
 
-gulp.task('createFinal', ['clean', 'sass', 'concatCss', 'concatJs', 'copyBootstrapFonts', 'copyImages']);
+gulp.task('createRes', ['clean', 'sass', 'concatCss', 'concatJs', 'copyBootstrapFonts', 'copyImages']);
 
-gulp.task('dist', ['createFinal'], function() {
+gulp.task('dist', ['createRes'], function() {
   const sassFilter = filter([
-    finalFolder + '**/*',
+    resFolder + '**/*',
     themeFolder + '*.php',
     themeFolder + '*.ico',
     themeFolder + '*.css',
@@ -76,26 +76,26 @@ gulp.task('concatJs', function () {
     themeFolder+'deps/highlightjs/highlight.pack.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
-    .pipe(gulp.dest(finalJsFolder));
+    .pipe(gulp.dest(jsFolder));
 });
 
 gulp.task('copyBootstrapFonts', function () {
   return gulp.src(themeFolder+'deps/bootstrap/fonts/*')
-    .pipe(gulp.dest(finalFontsFolder));
+    .pipe(gulp.dest(fontsFolder));
 });
 
 gulp.task('copyImages', function () {
   return gulp.src(themeFolder+'images/*')
-    .pipe(gulp.dest(finalImgFolder));
+    .pipe(gulp.dest(imgFolder));
 });
 
 gulp.task('concatCss', ['sass'], function () {
   return gulp.src([
     themeFolder+'deps/bootstrap/css/bootstrap.min.css',
-    finalCssFolder+'edinburgh.min.css' //include edinburgh last to override bootstrap!
+    cssFolder+'edinburgh.min.css' //include edinburgh last to override bootstrap!
   ])
     .pipe(concat('mergedStyles.min.css'))
-    .pipe(gulp.dest(finalCssFolder));
+    .pipe(gulp.dest(cssFolder));
 });
 
 gulp.task('default', ['sass', 'watch'], function () {

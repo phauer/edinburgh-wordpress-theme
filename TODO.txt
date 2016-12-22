@@ -1,4 +1,3 @@
 - clean up on server
 - fix broken watch workflow (-> also trigger concat tasks)
-- rename "final" to "res"
 - does notification work?
