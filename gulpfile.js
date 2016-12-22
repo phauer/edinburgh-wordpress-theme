@@ -13,10 +13,10 @@ var gulp = require('gulp'),
 
 var themeFolder = 'edinburgh/';
 var finalFolder = themeFolder + 'final/';
-var finalJsFolder = themeFolder + 'final/js/';
-var finalCssFolder = themeFolder + 'final/css/';
-var finalFontsFolder = themeFolder + 'final/fonts/';
-var finalImgFolder = themeFolder + 'final/img/';
+var finalJsFolder = finalFolder + 'js/';
+var finalCssFolder = finalFolder + 'css/';
+var finalFontsFolder = finalFolder + 'fonts/';
+var finalImgFolder = finalFolder + 'img/';
 
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
@@ -52,7 +52,7 @@ gulp.task('createFinal', ['clean', 'sass', 'concatCss', 'concatJs', 'copyBootstr
 
 gulp.task('dist', ['createFinal'], function() {
   const sassFilter = filter([
-    themeFolder + 'final/**/*',
+    finalFolder + '**/*',
     themeFolder + '*.php',
     themeFolder + '*.ico',
     themeFolder + '*.css',

@@ -1,8 +1,4 @@
-- remove includes and images from dist!!!
-  - remove images and includes folder from dist! but mind template-tags.php!
-    - clean up on server
-  - fix broken watch workflow (-> also trigger concat tasks)
-  - rename "final" to "res"
-  - includes
-    - rename to "deps"
+- clean up on server
+- fix broken watch workflow (-> also trigger concat tasks)
+- rename "final" to "res"
 - does notification work?
