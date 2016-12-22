@@ -1,2 +1,1 @@
-- clean up on server
 - does notification work?
