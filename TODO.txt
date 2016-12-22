@@ -4,7 +4,5 @@
   - fix broken watch workflow (-> also trigger concat tasks)
   - rename "final" to "res"
   - includes
-    - move template-tags out of there!!
     - rename to "deps"
-- find other solution for not committing carbonads-config.php
 - does notification work?
