@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php wp_head(); ?>
-  <link href="<?php bloginfo('template_url'); ?>/final/css/mergedStyles.min.css" rel="stylesheet">
+  <link href="<?php bloginfo('template_url'); ?>/res/css/mergedStyles.min.css" rel="stylesheet">
   <?php include_once("google-analytics.php"); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -47,7 +47,7 @@ if ( comments_open() || '0' != get_comments_number() ) {
 </footer>
 </div>
 
-<script src="<?php bloginfo('template_url'); ?>/final/js/mergedScripts.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/res/js/mergedScripts.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <?php wp_footer(); ?>
