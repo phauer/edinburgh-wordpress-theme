@@ -45,7 +45,6 @@ gulp.task('refresh', function () {
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch(themeFolder + '**/*.php', ['refresh']);
-    gulp.watch(themeFolder + '**/*.html', ['refresh']);
     gulp.watch(themeFolder + 'sass/*.scss', ['sass']);
 });
 
@@ -57,8 +56,7 @@ gulp.task('dist', ['createFinal'], function() {
     themeFolder + '*.php',
     themeFolder + '*.ico',
     themeFolder + '*.css',
-    themeFolder + '*.png',
-    themeFolder + 'includes/*.php'
+    themeFolder + '*.png'
   ]);
   gulp.src(themeFolder + '**/*')
     .pipe(sassFilter)
@@ -73,16 +71,16 @@ gulp.task('clean', function(){
 
 gulp.task('concatJs', function () {
   return gulp.src([
-    themeFolder+'includes/jquery-3.1.0.min.js', //first jquery, then bootstrap
-    themeFolder+'includes/bootstrap/js/bootstrap.js',
-    themeFolder+'includes/highlightjs/highlight.pack.js'
+    themeFolder+'deps/jquery-3.1.0.min.js', //first jquery, then bootstrap
+    themeFolder+'deps/bootstrap/js/bootstrap.js',
+    themeFolder+'deps/highlightjs/highlight.pack.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
     .pipe(gulp.dest(finalJsFolder));
 });
 
 gulp.task('copyBootstrapFonts', function () {
-  return gulp.src(themeFolder+'includes/bootstrap/fonts/*')
+  return gulp.src(themeFolder+'deps/bootstrap/fonts/*')
     .pipe(gulp.dest(finalFontsFolder));
 });
 
@@ -93,7 +91,7 @@ gulp.task('copyImages', function () {
 
 gulp.task('concatCss', ['sass'], function () {
   return gulp.src([
-    themeFolder+'includes/bootstrap/css/bootstrap.min.css',
+    themeFolder+'deps/bootstrap/css/bootstrap.min.css',
     finalCssFolder+'edinburgh.min.css' //include edinburgh last to override bootstrap!
   ])
     .pipe(concat('mergedStyles.min.css'))
