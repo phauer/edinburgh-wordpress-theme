@@ -39,5 +39,5 @@ $ ncftpput -R -v -u "username" yourdomain.de /<wordpress path>/wp-content/themes
 
 # Development
 ```
-gulp createFinal # creates the final folder with all required
+gulp createFinal # creates the res folder with all required
 ```
