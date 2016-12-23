@@ -1,2 +1,1 @@
 - does notification work?
-- add only merged css in dist

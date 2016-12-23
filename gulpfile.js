@@ -68,7 +68,8 @@ gulp.task('dist', ['createAll'], function () {
     themeFolder + '*.php',
     themeFolder + '*.ico',
     themeFolder + '*.css',
-    themeFolder + '*.png'
+    themeFolder + '*.png',
+    '!' + cssFolder + 'edinburgh*.css'
   ]);
   gulp.src(themeFolder + '**/*')
     .pipe(sassFilter)
