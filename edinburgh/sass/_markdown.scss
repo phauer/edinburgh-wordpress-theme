@@ -1,41 +1,46 @@
 @import "common";
 
+@mixin imgWidth($width) {
+  img.w#{$width}{
+    width: #{$width}px;
+    +em, +br+em {
+      width: #{$width - 25}px;
+      margin: 0 auto;
+    }
+  }
+}
 //markdown classes. pattern to use captions with markdown extra:
-//![asdfasdfdsf](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png){.center}
-//*asdfasdfdsf*
+//![alt text](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.center}
+//*caption*
 main.eb-content {
   article.eb-entry {
     .eb-entry-content {
-      .w200 {
-        width: 200px;
-      }
-      .w300 {
-        width: 300px;
-      }
-      .w400 {
-        width: 400px;
-      }
-      .w500 {
-        width: 500px;
-      }
-      .w600 {
-        width: 600px;
-      }
       //center by default
       img {
         display:block;
-        margin: 0 auto;
+        margin: 15px auto 5px;
         +br {
           display:none;
         }
-        +em,
-        +br+em {
+        +em, +br+em {
           text-align: center;
           display: block;
           margin-top: 5px;
+          margin-bottom: 15px;
           font-style: normal;
         }
       }
+      @include imgWidth(200);
+      @include imgWidth(250);
+      @include imgWidth(300);
+      @include imgWidth(350);
+      @include imgWidth(400);
+      @include imgWidth(450);
+      @include imgWidth(500);
+      @include imgWidth(550);
+      @include imgWidth(600);
+      @include imgWidth(650);
+
       table {
         th, td {
           padding: 8px;

@@ -1,6 +1,7 @@
 @import "common";
 
 /* class to resize svgs (because it can't be set like you do with pixel images) */
+/* TOOD this classes can be removed after markdown-migration */
 .svg-500px {
   width: 500px;
 }
