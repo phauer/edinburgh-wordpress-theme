@@ -37,11 +37,13 @@ main.eb-content {
       }
       //if img is linked (nesting in <a>)
       //problem: I can't select all <a> that contains an <img>. Let's hope that the a+br+em sequence only occurs for image captions.
-      a+br{
-        display:none;
-      }
-      a+br+em {
-        @extend .imageCaption;
+      a {
+        +br {
+          display:none;
+        }
+        +br+em {
+          @extend .imageCaption;
+        }
       }
       @include imgWidth(200);
       @include imgWidth(250);
