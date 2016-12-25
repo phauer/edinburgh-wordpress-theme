@@ -3,15 +3,27 @@
 @mixin imgWidth($width) {
   img.w#{$width}{
     width: #{$width}px;
-    +em, +br+em {
+    +br+em {
       width: #{$width - 25}px;
       margin: 0 auto;
     }
+  }
+  a+br+em {
+    width: #{$width - 25}px;
+    margin: 0 auto;
   }
 }
 //markdown classes. pattern to use captions with markdown extra:
 //![alt text](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.center}
 //*caption*
+.centerText {
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-style: normal;
+}
+
 main.eb-content {
   article.eb-entry {
     .eb-entry-content {
@@ -22,13 +34,17 @@ main.eb-content {
         +br {
           display:none;
         }
-        +em, +br+em {
-          text-align: center;
-          display: block;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          font-style: normal;
+        +br+em {
+          @extend .centerText;
         }
+      }
+      //if img is linked (nesting in <a>)
+      //problem: I can't select all <a> that contains an <img>. Let's hope that the a+br+em sequence only occurs for image captions.
+      a+br{
+        display:none;
+      }
+      a+br+em {
+        @extend .centerText;
       }
       @include imgWidth(200);
       @include imgWidth(250);
