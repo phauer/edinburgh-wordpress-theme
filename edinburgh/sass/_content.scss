@@ -61,10 +61,17 @@ main.eb-content {
         margin-top: 10px;
         margin-bottom: 10px;
       }
+      //copied from inline css in header (img.wp-smiley, img.emoji)
       img[src*="emoji"] {
-        width: 16px;
         display: inline !important;
-        margin: inherit;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
       }
       img.eb-thumbnail.wp-post-image[src$=".svg"] {
         width: 200px;
