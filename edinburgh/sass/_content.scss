@@ -61,6 +61,11 @@ main.eb-content {
         margin-top: 10px;
         margin-bottom: 10px;
       }
+      img[src*="emoji"] {
+        width: 16px;
+        display: inline !important;
+        margin: inherit;
+      }
       img.eb-thumbnail.wp-post-image[src$=".svg"] {
         width: 200px;
       }
