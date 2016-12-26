@@ -8,9 +8,18 @@
       margin: 0 auto;
     }
   }
+  a.w#{$width} {
+    img {
+      width: #{$width}px;
+    }
+    +br+em {
+      width: #{$width - 25}px;
+      margin: 0 auto;
+    }
+  }
 }
 /* markdown classes. pattern to use captions with markdown extra:
-![alt text](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.center}
+![alt text](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.w400}
 *caption*
 */
 .imageCaption {
