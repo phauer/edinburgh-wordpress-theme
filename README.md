@@ -1,6 +1,6 @@
-# Edinburgh Wordpress Template
+# Edinburgh Wordpress Theme (outdated)
 
-Wordpress theme for my blog. Please mind that this theme is tailored for my blog. It may also work for your use case, but don't expect it.
+This is the former Wordpress theme for my blog. It's not used anymore, since I moved to [Hugo](https://gohugo.io/) and created a new theme. See [Edinburgh Hugo Theme](https://github.com/phauer/edinburgh-hugo-theme).
 
 ## Setup Development Environment
 
